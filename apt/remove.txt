@@ -31,3 +31,8 @@ python-minecraftpi
 penguinspuzzle
 
 x2x
+
+
+samba
+smbclient 
+libsmbclient
