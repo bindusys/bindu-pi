@@ -26,6 +26,8 @@ def remove_crap():
 	cmd = "sudo apt-get -y remove %s" % " ".join(lst)
 	#print cmd
 	local(cmd)
+	
+	local("sudo apt-get -y --auto-remove purge raspberrypi-artwork")
 
 def upgrade():
 	"""Update to latest patches"""
