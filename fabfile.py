@@ -27,4 +27,8 @@ def remove_crap():
 def upgrade():
 	"""Update to latest patches"""
 	local("sudo apt-get update")
-	local("sudo apt-get upgrade")
+	local("sudo apt-get -y upgrade")
+	local("sudo apt-get autoremove")
+	local("sudo apt-get clean")
+	
+	
