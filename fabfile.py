@@ -21,5 +21,10 @@ def remove_crap():
 		lst.append(ii)
 
 	cmd = "sudo apt-get remove %s" % " ".join(lst)
-	print cmd
+	#print cmd
 	local(cmd)
+
+def upgrade():
+	"""Update to latest patches"""
+	local("sudo apt-get update")
+	local("sudo apt-get upgrade")
