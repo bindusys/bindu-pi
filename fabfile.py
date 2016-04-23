@@ -20,7 +20,7 @@ def remove_crap():
 			continue 
 		lst.append(ii)
 
-	cmd = "sudo apt-get remove %s" % " ".join(lst)
+	cmd = "sudo apt-get -y remove %s" % " ".join(lst)
 	#print cmd
 	local(cmd)
 
