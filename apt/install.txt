@@ -6,5 +6,9 @@
 tightvncserver
 
 
+python3-pyqt5
+
+
+
 
 
