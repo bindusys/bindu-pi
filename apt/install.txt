@@ -4,9 +4,12 @@
 ## Utils ##
 
 tightvncserver
-
+htop
 
 python3-pyqt5
+
+imagemagick
+feh
 
 
 
