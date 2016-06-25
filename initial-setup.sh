@@ -1,10 +1,19 @@
 #!/bin/sh
 
-echo "-------------------------"
+echo "############################"
 echo "bindu-rpi - Initial Setup"
-echo "-------------------------"
+echo "############################"
+echo ""
+echo "=== Install python headers ==="
+sudo apt-get install libpython-all-dev
 
-sudo pip install fabric
+echo ""
+echo "=== Install Fabric ==="
+sudo pip install -I fabric
+
+echo ""
+echo "Bindu done.. now run `fab -l` "
+
 
 
     
