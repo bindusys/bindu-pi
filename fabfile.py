@@ -19,8 +19,10 @@ def _read_apt_file(file_name):
 		lst.append(ii)
 	return lst
 
+
+
 def remove_crap():
-	"""Remove not required packages from `apt/remove.txt` """
+	"""Remove crap packages - listed in `apt/remove.txt` """
 	
 	lst =_read_apt_file("remove.txt")
 	cmd = "sudo apt-get -y remove %s" % " ".join(lst)
@@ -38,9 +40,25 @@ def upgrade():
 	
 	
 def install_essentials():
-	"""Install essentials"""
+	"""Install essentials  - listed in `apt/install.txt` """
 	
 	lst =_read_apt_file("install.txt")
 	cmd = "sudo apt-get -y install %s" % " ".join(lst)
 	#print cmd
 	local(cmd)
+	
+def conky():
+  """Install `conky` and sys info on background"""
+  local("sudo cp %s/etc/conky/conky.conf /etc/conky/conky.conf" % HERE_PATH)
+  local("cp %s/etc/conky/conky.desktop ~/.config/autostart/conky.desktop" % HERE_PATH)
+	
+	
+def all():
+  """## Runs all steps in sequence and recommended"""
+  remove_crap()
+  upgrade()
+  install_essentials()
+  conky()
+  upgrade()
+  local("sudo reboot")
+  
