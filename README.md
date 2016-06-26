@@ -12,8 +12,8 @@ Note: The "default" user is `pi` and the pass is `raspberry`
 
 Kick up a terminal and tap in
 
-  sudo apt-get install git
-  git clone https://daffodil@bitbucket.org/bindusys/bindu-rpi.git
+    sudo apt-get install git
+    git clone https://daffodil@bitbucket.org/bindusys/bindu-rpi.git
 
 
 2: Install bootstrap essentials
@@ -22,8 +22,8 @@ Kick up a terminal and tap in
 Enter the bindu-sys dir and run the script "initial-setup.sh"
 which install some python headers and fabric
 
-  cd bindu-sys
-  ./initial-setup.sh
+    cd bindu-sys
+    ./initial-setup.sh
 
 
 3: Run `fab` commands
@@ -32,7 +32,7 @@ which install some python headers and fabric
 To complete tap in `fab all` which executes a series of commands
 and could take a while. When complete it will reboot.
 
-  fab all
+    fab all
 
 For more "fab commands" exec `fab -l`
 
@@ -41,15 +41,16 @@ For more "fab commands" exec `fab -l`
 
 SSH in from remote machine with
 
-  ssh pi@<ip>
+    ssh pi@<ip>
+    > pass = raspberry
 
 To set passwordless login
 
-  ssh-copy-id pi@<ip>
+    ssh-copy-id pi@<ip>
 
 then below should work with no pass
 
-  ssh pi@<ip>
+    ssh pi@<ip>
 
  
  
