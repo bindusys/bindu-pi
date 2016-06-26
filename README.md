@@ -1,9 +1,11 @@
-bindu-rpi
-===================
+BinduSYS RaspberryPi 
+=================================
 
-These are some scripts and utils to setup and RPI, 
+This repos contains some scripts and utils to setup an RPI.
 by getting rid of crap, installing essentials,
-and minor configuration.
+and minor configuration, for a first time install.
+
+Note: The "default" user is `pi` and the pass is `raspberry`
 
 1: Install git and clone this repos
 =======================================
@@ -27,14 +29,28 @@ which install some python headers and fabric
 3: Run `fab` commands
 ===============================
 
-To complete tap in which executes a series of commands
-and could take a while.
+To complete tap in `fab all` which executes a series of commands
+and could take a while. When complete it will reboot.
 
-  fab setup
+  fab all
 
-For more "fab commands"
+For more "fab commands" exec `fab -l`
 
-  fab -l
+4: Bonus
+==============================
+
+SSH in from remote machine with
+
+  ssh pi@<ip>
+
+To set passwordless login
+
+  ssh-copy-id pi@<ip>
+
+then below should work with no pass
+
+  ssh pi@<ip>
+
  
  
 
