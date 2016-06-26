@@ -49,8 +49,8 @@ def install_essentials():
 	
 def conky():
   """Install `conky` and sys info on background"""
-  local("sudo cp %s/etc/conky/conky.conf /etc/conky/conky.conf" % HERE_PATH)
-  local("cp %s/etc/conky/conky.desktop ~/.config/autostart/conky.desktop" % HERE_PATH)
+  local("sudo cp %s/conky/conky.conf /etc/conky/conky.conf" % HERE_PATH)
+  local("cp %s/conky/conky.desktop ~/.config/autostart/conky.desktop" % HERE_PATH)
 	
 	
 def all():
