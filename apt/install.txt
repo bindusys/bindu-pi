@@ -11,7 +11,7 @@ python3-pyqt5.qtwebsockets
 
 imagemagick
 feh
-
+conky
 
 
 
