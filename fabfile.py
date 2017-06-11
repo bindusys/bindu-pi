@@ -47,7 +47,7 @@ def install_essentials():
 	#print cmd
 	local(cmd)
 	
-def conky():
+def install_conky():
   """Install `conky` and sys info on background"""
   local("sudo cp %s/conky/conky.conf /etc/conky/conky.conf" % HERE_PATH)
   local("cp %s/conky/conky.desktop ~/.config/autostart/conky.desktop" % HERE_PATH)
@@ -57,8 +57,8 @@ def all():
   """## Runs all steps in sequence and recommended"""
   remove_crap()
   upgrade()
-  install_essentials()
-  conky()
+  install_essentials()  
   upgrade()
   local("sudo reboot")
+  
   
