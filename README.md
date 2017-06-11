@@ -51,7 +51,7 @@ fab install_conky
 
 
 
-For more "fab commands" exec `fab -l`
+For more "fab commands" run `fab -l`
 
 ### 4: Setup ssh
 
