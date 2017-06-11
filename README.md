@@ -43,7 +43,7 @@ Optionally, install "conky", which will
 create an overlay with the machine's ip address etc 
 (useful when no keyboard and require remote access)
 
-![conky](images/rpi-conky.txt)
+![conky](images/rpi-conky.jpeg)
 
 ```
 fab install_conky
